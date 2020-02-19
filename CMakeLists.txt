@@ -5,3 +5,9 @@ project(template_project LANGUAGES CXX)
 add_subdirectory(externals)
 add_subdirectory(src)
 
+option(BUILD_TESTING "Build the tests" ON)
+if(BUILD_TESTING)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
+
