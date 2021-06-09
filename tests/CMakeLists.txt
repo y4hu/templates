@@ -12,7 +12,7 @@ endmacro()
 
 macro(package_add_bench BENCHNAME)
     add_executable(${BENCHNAME} ${ARGN})
-    target_link_libraries(${BENCHNAME} chip-8-vm)
+    #target_link_libraries(${BENCHNAME} libname)
     target_link_libraries(${BENCHNAME} benchmark)
     set_target_properties(${BENCHNAME} PROPERTIES OUTPUT_NAME ${BENCHNAME}_bench)
 endmacro()
